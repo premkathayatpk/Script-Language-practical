@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <button id="btn">Click</button>
+    <br>
+    <button id="btn1">Click1</button>
+    <br>
+    <button id="btn2">Click2</button>
+    <br>
+    <button id="btn3">Click3</button>
+  </div>
+
+  <script>
+    document.getElementById("btn").addEventListener("mousemove", function fun1() {
+      console.log("mousemove event occure.");
+    });
+
+    document.getElementById("btn1").addEventListener("click", function fun2() {
+      console.log("Click event occure.");
+    });
+
+    document.getElementById("btn2").addEventListener("mouseover", function fun3() {
+      console.log("Mouseover event occure.");
+    });
+
+    document.getElementById("btn3").addEventListener("dblclick", function fun4() {
+      console.log("Mouse double click event occure.");
+    });
+
+  </script>
+
+</body>
+
+</html>
