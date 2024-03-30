@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <!-- checkbox -->
+    <p id="para">Javascript is client side scripting </p>
+    <input type="checkbox" class="abc" onclick="fun1()">Color:Red
+
+    <!-- radio button -->
+    <input id="rd1" name="group1" type="radio" value="male">Male<br>
+    <input id="rd2" name="group1" type="radio" value="female">Female<br>
+    <button onclick="fun2()">Clickme</button>
+
+    <!-- Select box -->
+    <select id="sbox">
+      <option value="Nepal">Nepal</option>
+      <option value="China">China</option>
+      <option value="India">India</option>
+    </select>
+    <button onclick="fun3()">Press Me</button>
+  </form>
+  <p id="content"></p>
+
+  <script>
+    function fun1() {
+      var chkbx = document.getElementsByClassName("abc");
+      if (chkbx[0].checked == true) {
+        document.getElementById("para").style.color = "Red";
+      }
+      else {
+        document.getElementById("para").style.color = "black";
+      }
+    }
+
+    function fun2() {
+      let rd1 = document.getElementById("rd1");
+      let rd2 = document.getElementById("rd2");
+      if (rd1.checked)
+        alert(rd1.value + " is checked");
+      else if (rd2.checked)
+        alert(rd2.value + " is checked");
+      else
+        alert("nothing is selected");
+    }
+
+    function fun3() {
+      var select = document.getElementById("sbox");
+      alert(select.options[select.selectedIndex].
+        value);
+    }
+  </script>
+</body>
+
+</html>
