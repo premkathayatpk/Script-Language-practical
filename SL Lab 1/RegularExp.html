@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    let regex = /Ram/;
+    let str = "My name is Ram kathayat.";
+
+    console.log(regex.exec(str));
+    console.log(regex.test(str));
+    console.log(str.match(regex));
+    console.log(str.search(regex));
+    console.log(str.replace(regex, 'Prem'));
+  </script>
+</body>
+
+</html>
