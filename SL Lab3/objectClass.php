@@ -5,13 +5,13 @@ class student{
     public $roll;
 
 function set_name($name){
-    this->$name = $name;
+    $this-> name = $name;
 }
 function set_address($address){
-    $this-> $address = $address;
+    $this-> address = $address;
 }
 function set_roll($roll){
-    $this->$roll = $roll;
+    $this->roll = $roll;
 }
 function get_val(){
     echo "Name : ". $this -> name ."<br>";  
