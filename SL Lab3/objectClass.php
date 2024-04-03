@@ -21,3 +21,11 @@ function get_val(){
 }
 
 $student= new student();
+
+$student->set_name('Ram');
+$student->set_address("Kathmandu");
+$student->set_roll(12);
+
+echo "Displaying values"."<br>";
+$student->get_val();
+?>
