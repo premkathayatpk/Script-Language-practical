@@ -19,3 +19,5 @@ function get_val(){
     echo "Roll No. : ". $this -> roll . "<br><hr>";
     }
 }
+
+$student= new student();
