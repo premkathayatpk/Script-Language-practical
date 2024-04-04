@@ -13,3 +13,12 @@ class fruit{
 
   }
 }
+class berry extends fruit{
+    public function message(){
+      echo "This is a Berry";
+    }
+  }
+  $obj = new berry("Apple","Red");
+  $obj-> message();
+  $obj-> get_Info();
+  ?>
