@@ -7,3 +7,9 @@ class fruit{
     $this->name = $name;
     $this->color = $color;
   }
+  public function get_Info(){
+    echo "Name of Fruit = ".$this->name;
+    echo "<br>Color of Fruit = ".$this->color;
+
+  }
+}
