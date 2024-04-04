@@ -14,15 +14,19 @@ class fruit{
   }
 }
 class berry extends fruit{
-    public $weight;
-     public function __construct($name, $color,$weight){
-       $this->name = $name;
-       $this->color = $color;
-       $this->weight = $weight;
-     }
-     public function get_Info(){
-        echo "Name = ".$this->name;
-        echo "<br>Color = ".$this->color;
-        echo "<br>Weight  = ".$this->weight;
-    
-      }
+ public $weight;
+  public function __construct($name, $color,$weight){
+    $this->name = $name;
+    $this->color = $color;
+    $this->weight = $weight;
+  }
+  public function get_Info(){
+    echo "Name = ".$this->name;
+    echo "<br>Color = ".$this->color;
+    echo "<br>Weight  = ".$this->weight;
+
+  }
+}
+$obj = new berry("Banana","Yellow",10);
+$obj-> get_Info();
+?>
