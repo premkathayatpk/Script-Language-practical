@@ -13,3 +13,10 @@ class fruit{
 
   }
 }
+class berry extends fruit{
+    public $weight;
+     public function __construct($name, $color,$weight){
+       $this->name = $name;
+       $this->color = $color;
+       $this->weight = $weight;
+     }
