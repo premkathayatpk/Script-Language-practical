@@ -20,3 +20,9 @@ class berry extends fruit{
        $this->color = $color;
        $this->weight = $weight;
      }
+     public function get_Info(){
+        echo "Name = ".$this->name;
+        echo "<br>Color = ".$this->color;
+        echo "<br>Weight  = ".$this->weight;
+    
+      }
