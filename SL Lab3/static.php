@@ -12,3 +12,7 @@ echo "<br>";
 Cars :: addToNumCars(3);
 echo Cars:: $numCars;
 echo "<br>";
+
+Cars :: addToNumCars(-1);
+echo Cars:: $numCars;
+?>
