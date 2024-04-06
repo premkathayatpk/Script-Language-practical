@@ -25,3 +25,18 @@
 
 <button id="hideButton">Hide</button>
 <button id="unhideButton">Unhide</button>
+<script>
+$(document).ready(function(){
+    $("#hideButton").click(function(){
+        $(".image").hide();
+    });
+
+   
+    $("#unhideButton").click(function(){
+        $(".image").show();
+    });
+});
+</script>
+
+</body>
+</html>
