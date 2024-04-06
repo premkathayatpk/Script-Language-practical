@@ -17,3 +17,11 @@
     }
 </style>
 </head>
+<body>
+
+<div class="image-container">
+    <img src="flower.png" class="image">
+</div>
+
+<button id="hideButton">Hide</button>
+<button id="unhideButton">Unhide</button>
