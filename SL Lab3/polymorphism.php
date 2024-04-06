@@ -26,3 +26,9 @@ class Rectangle implements Shape {
         return $this->width * $this->height;
     }
 }
+$circle = new Circle(5);
+$rectangle = new Rectangle(10, 7);
+
+echo "The area of the circle is: " . $circle->getArea() . "<br>";
+echo "The area of the rectangle is: " . $rectangle->getArea() . "<br>";
+?>
