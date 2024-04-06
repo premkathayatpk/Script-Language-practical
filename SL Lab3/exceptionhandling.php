@@ -5,3 +5,9 @@ function checkNum($num) {
     }
     return true;
 }
+try {
+    checkNum(0);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
