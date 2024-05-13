@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        .box {
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Basic Arithmetic Functions</h1>
+        <form action="">
+            <input type="number" id="operand1" placeholder="operand">
+            <br>
+            <br>
+            <input type="number" id="operand2" placeholder="operand">
+            <br>
+            <br>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="sub()">Subtract</button>
+            <button type="button" onclick="mul()">Multiply</button>
+            <br>
+            <br>
+            <button type="button" onclick="divide()">Divide</button>
+            <button type="button" onclick="mod()">Modulus</button>
+            <br>
+            <br>
+            <label for="result">Result:</label>
+            <br>
+            <br>
+            <input type="number" id="result" readonly>
+        </form>
+    </div>
+
+    <script>
+        let op1 = document.getElementById('operand1');
+        let op2 = document.getElementById('operand2');
+
+        function add() {
+            let result = parseInt(op1.value) + parseInt(op2.value);
+            document.getElementById('result').value = result;
+        }
+
+        function sub() {
+            let result = parseInt(op1.value) - parseInt(op2.value);
+            document.getElementById('result').value = result;
+        }
+
+        function mul() {
+            let result = parseInt(op1.value) * parseInt(op2.value);
+            document.getElementById('result').value = result;
+        }
+
+        function divide() {
+            let result = parseInt(op1.value) / parseInt(op2.value);
+            document.getElementById('result').value = result;
+        }
+
+        function mod() {
+            let result = parseInt(op1.value) % parseInt(op2.value);
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+</html>
