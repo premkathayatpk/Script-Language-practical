@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    fieldset {
+      border-radius: 10px;
+      width: 400px;
+      margin: 200px auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Register</legend>
+      <p>*required fields</p>
+      Your Full Name*:<br>
+      <input type="text" id="name"><br>
+      Email Address*:<br>
+      <input type="email" id="email"><br>
+      User Name*:<br>
+      <input type="text" id="username"><br>
+      Password*:<br>
+      <input type="password" id="pass"><br><br>
+      <button type="button" onclick="valid()" id="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <script>
+    function valid() {
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let username = document.getElementById('username').value;
+      let password = document.getElementById('pass').value;
+
+      if (name === '' || email === '' || username === '' || password === '') {
+        alert('Please fill out all the required fields');
+      } else if (!validateEmail(email)) {
+        alert('Invalid email address');
+      } else if (!validateName(name)) {
+        alert('Invalid Name');
+      } else if (!validateUsername(username)) {
+        alert('Invalid Username');
+      } else if (!validatePassword(password)) {
+        alert('Weak Password, please enter a stronger password');
+      } else {
+        alert('Registration Successful!');
+      }
+    }
+
+    // Validate functions
+    function validateEmail(email) {
+      // Basic email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function validateName(name) {
+      // Name must be up to 40 characters
+      return name.length <= 40;
+    }
+
+    function validateUsername(username) {
+      // Username must start with a string followed by numbers
+      const usernameRegex = /^[A-Za-z]+\d*$/;
+      return usernameRegex.test(username);
+    }
+
+    function validatePassword(password) {
+      // Password length must be more than 8 characters
+      return password.length > 8;
+    }
+  </script>
+</body>
+
+</html>
